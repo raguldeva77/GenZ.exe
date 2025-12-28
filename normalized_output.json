@@ -1,0 +1,62 @@
+{
+  "organization": {
+    "name": "Sample Organization",
+    "type": "Finance"
+  },
+  "findings": [
+    {
+      "vuln_id": "VULN-001",
+      "title": "Unencrypted Database Connection",
+      "severity": "Critical",
+      "base_score": 9.8,
+      "affected_asset": "User DB Server",
+      "evidence": "Port 3306 open without TLS encryption. Database credentials transmitted in plaintext.",
+      "source_file": "sample_scan1.xml"
+    },
+    {
+      "vuln_id": "VULN-002",
+      "title": "SQL Injection Vulnerability",
+      "severity": "High",
+      "base_score": 8.5,
+      "affected_asset": "Web Application Login",
+      "evidence": "User input not sanitized in authentication endpoint /api/login",
+      "source_file": "sample_scan1.xml"
+    },
+    {
+      "vuln_id": "VULN-004",
+      "title": "Remote Code Execution",
+      "severity": "Critical",
+      "base_score": 10.0,
+      "affected_asset": "API Gateway",
+      "evidence": "Deserialization vulnerability allows arbitrary code execution",
+      "source_file": "sample_scan1.xml"
+    },
+    {
+      "vuln_id": "VULN-006",
+      "title": "Cross-Site Scripting (XSS)",
+      "severity": "High",
+      "base_score": 7.8,
+      "affected_asset": "Customer Portal",
+      "evidence": "Reflected XSS in search parameter allows script injection",
+      "source_file": "sample_scan2.json"
+    },
+    {
+      "vuln_id": "VULN-007",
+      "title": "Missing Authentication",
+      "severity": "Critical",
+      "base_score": 9.1,
+      "affected_asset": "Admin Dashboard",
+      "evidence": "Admin endpoints accessible without authentication",
+      "source_file": "sample_scan2.json"
+    },
+    {
+      "vuln_id": "VULN-009",
+      "title": "Insecure Direct Object Reference",
+      "severity": "High",
+      "base_score": 8.2,
+      "affected_asset": "User Profile API",
+      "evidence": "Users can access other users' data by changing ID parameter",
+      "source_file": "sample_scan2.json"
+    }
+  ]
+}

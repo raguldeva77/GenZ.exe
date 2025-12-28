@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scan>
+  <organization name="Sample Organization" type="Finance" />
+  <vulnerabilities>
+    <vulnerability>
+      <id>VULN-001</id>
+      <title>Unencrypted Database Connection</title>
+      <severity>Critical</severity>
+      <base_score>9.8</base_score>
+      <affected_asset>User DB Server</affected_asset>
+      <evidence>Port 3306 open without TLS encryption. Database credentials transmitted in plaintext.</evidence>
+    </vulnerability>
+    <vulnerability>
+      <id>VULN-002</id>
+      <title>SQL Injection Vulnerability</title>
+      <severity>High</severity>
+      <base_score>8.5</base_score>
+      <affected_asset>Web Application Login</affected_asset>
+      <evidence>User input not sanitized in authentication endpoint /api/login</evidence>
+    </vulnerability>
+    <vulnerability>
+      <id>VULN-003</id>
+      <title>Outdated SSL Certificate</title>
+      <severity>Medium</severity>
+      <base_score>5.3</base_score>
+      <affected_asset>Web Server</affected_asset>
+      <evidence>SSL certificate expired 30 days ago</evidence>
+    </vulnerability>
+    <vulnerability>
+      <id>VULN-004</id>
+      <title>Remote Code Execution</title>
+      <severity>Critical</severity>
+      <base_score>10.0</base_score>
+      <affected_asset>API Gateway</affected_asset>
+      <evidence>Deserialization vulnerability allows arbitrary code execution</evidence>
+    </vulnerability>
+    <vulnerability>
+      <id>VULN-005</id>
+      <title>Weak Password Policy</title>
+      <severity>Low</severity>
+      <base_score>3.1</base_score>
+      <affected_asset>User Management System</affected_asset>
+      <evidence>Minimum password length is 6 characters</evidence>
+    </vulnerability>
+  </vulnerabilities>
+</scan>

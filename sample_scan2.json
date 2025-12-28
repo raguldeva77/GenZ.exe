@@ -1,0 +1,40 @@
+{
+  "organization": {
+    "name": "Sample Organization",
+    "type": "Finance"
+  },
+  "vulnerabilities": [
+    {
+      "id": "VULN-006",
+      "title": "Cross-Site Scripting (XSS)",
+      "severity": "High",
+      "base_score": 7.8,
+      "affected_asset": "Customer Portal",
+      "evidence": "Reflected XSS in search parameter allows script injection"
+    },
+    {
+      "id": "VULN-007",
+      "title": "Missing Authentication",
+      "severity": "Critical",
+      "base_score": 9.1,
+      "affected_asset": "Admin Dashboard",
+      "evidence": "Admin endpoints accessible without authentication"
+    },
+    {
+      "id": "VULN-008",
+      "title": "Information Disclosure",
+      "severity": "Medium",
+      "base_score": 5.0,
+      "affected_asset": "Error Pages",
+      "evidence": "Stack traces exposed in production error messages"
+    },
+    {
+      "id": "VULN-009",
+      "title": "Insecure Direct Object Reference",
+      "severity": "High",
+      "base_score": 8.2,
+      "affected_asset": "User Profile API",
+      "evidence": "Users can access other users' data by changing ID parameter"
+    }
+  ]
+}
